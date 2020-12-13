@@ -44,7 +44,7 @@ class Passport:
     Returns true if the Passport is Valid.
     (i.e.) if all fields are there except for cid.
     """
-    def isValid(self):
+    def is_valid(self):
         return (
                 self.byr != None and
                 self.iyr != None and
@@ -64,7 +64,7 @@ if __name__ == "__main__":
         counter = 0    
         for passport_string in input_string.split('\n\n'):
             if (passport_string != ''):
-                if (Passport.instance_from_string(passport_string).isValid()):
+                if (Passport.instance_from_string(passport_string).is_valid()):
                     counter += 1
         print(counter)
         exit(0)
